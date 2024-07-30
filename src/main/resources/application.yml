@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: chatting
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/sns
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: user326
+    password: 1234
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: test
+  jpa:
+    hibernate:
+#      ddl-auto: create
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
