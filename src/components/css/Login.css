@@ -1,0 +1,68 @@
+html, #root {
+    height: 100vh;
+}
+
+.top {
+    display: flex;
+    gap: 140px;
+}
+.create-channel{
+    display: flex;
+}
+
+.current-channel{
+    color: rgba(2, 11, 41, 0.377);
+    height: 100%;
+    font-size: 1.5em;
+    letter-spacing: 5px;
+    
+}   
+
+.jua-regular {
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#root .login {
+    padding: 8px;
+    border-radius: 5px;
+    width: 40%;
+    /* margin: auto; */
+   
+
+}
+
+.login {
+    background-color: rgba(0, 0, 0, 0.411);
+    box-shadow: 5px 5px 5px 5px gray;
+    height: 60%;
+     margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    justify-content: space-around;
+}
+
+.login form {
+    color: bisque;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 0;
+    
+
+}
+
+.app-name {
+    font-family: 'Staatliches', cursive;
+    text-shadow: 5px 5px #2D63A7;
+    color: #f1f1f1;
+    height: 30%;
+    font-size: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
