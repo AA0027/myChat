@@ -31,18 +31,16 @@ const MessageInput = (props) => {
     }
     
 
-    const sendMessage = () => {
+    const sendMessage = async () => {
         const msg = {
             sender: user.userId,
             content: message
         }
         stompClient.current.send(`/pub/${channel.url}`, {}, JSON.stringify(msg));
        const newMessage = {
+            userId: user.userId,
+            name: user.name,
             content: message,
-            chatUser: {
-                name: user.name,
-            },
-            regdate: new Date(),
        }
        dispatch(setMessages([...messages, newMessage]));
         setMessage("");
@@ -56,7 +54,7 @@ const MessageInput = (props) => {
                 <Col className="p-0">
                     <TextareaAutosize  onKeyDown={keyDownEvent} onChange={myMessage} className="input" value={message} placeholder="write message..." name="content" />
                 </Col>
-                <Button variant="primary" className="msg-btn" onClick={sendMessage} ><i className="bi bi-send go"></i></Button>
+                <Button variant="primary" className="msg-btn" onClick={async() =>  {await sendMessage();}} ><i className="bi bi-send go"></i></Button>
                 
             </Row>
         </Container>

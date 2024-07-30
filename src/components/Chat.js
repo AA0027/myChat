@@ -4,12 +4,15 @@ import MessageInput from './MessageInput';
 import "./css/Chat.css";
 import { Container } from 'react-bootstrap';
 import Message from './Message';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import "../function/Connect";
 import { Stomp } from '@stomp/stompjs';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
+import axios from 'axios';
+import { setMessages } from '../redux/store';
 const Chat = () => {
     const { channel, messages, user } = useSelector((store) => store);
+    const dispatch = useDispatch();
     const stompClient = useRef(null);
     const scrollRef = useRef();
 
@@ -26,10 +29,14 @@ const Chat = () => {
                             console.log();
                         }
                 );
+
+
         });
-        if(scrollRef == null){
+        if(scrollRef != null){
             scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
         }
+
+        
         
     },[ channel , messages]);
     if(messages.length === 0){

@@ -12,7 +12,7 @@ const Login = () => {
         userId: "",
         password: "",
     });
-
+    
 
     const goHome = (user) => {
         
@@ -46,9 +46,6 @@ const Login = () => {
 
     };
 
-    // useEffect({
-
-    // }, []);
 
     const changeValue = (e) => {
         setUser({

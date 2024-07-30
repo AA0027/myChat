@@ -14,7 +14,7 @@ const Message = (prop) => {
                 </Avatar>
            
             </div>
-         );
+         );  
     }
     else {
         return (
