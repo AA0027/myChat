@@ -18,7 +18,7 @@
 ### 🎯기술시연 영상
 클릭시 유튜브 기술시연 영상   
 
- >#1.[로그인 및 회원가입](https://youtu.be/vDreVqhy6dY)    
+ >#1.[![이미지 텍스트](https://github.com/user-attachments/assets/834ff57e-38fc-4157-8e17-e543f8621681)](https://youtu.be/MqR91vfhu2M)
 
 <br/><br/>
 ### 🛠기술 스택
